@@ -1,4 +1,4 @@
-# PIC18F2550 Bootloader
+# PIC18F2550/PIC18LF2550 USB Bootloader
 
 ## 簡介
 這個專案實現了一個 Bootloader，適用於 PIC18F2550 或 PIC18LF2550 微控制器。Bootloader 是一個小型程式，允許你在不需要專用燒錄器的情況下，通過USB將新的固件燒錄到微控制器中。
