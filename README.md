@@ -21,17 +21,17 @@
 
 ## 使用說明
 
-### 硬體連接
+  ### 硬體連接
 
-### 燒錄 Bootloader
+  ### 燒錄 Bootloader
 1. 使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
 
-### 更新固件
+  ### 更新固件
 1. 使用[HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。
 2. 將要更新的固件 HEX 檔案發送到 Bootloader。
 3. Bootloader 將接收並驗證固件，然後將其寫入微控制器的程式記憶體。
 
-## 配置選項
+  ### config bit
 
 ## 參考資料
 
