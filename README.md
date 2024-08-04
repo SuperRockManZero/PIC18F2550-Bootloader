@@ -21,6 +21,7 @@
 
 - MPLAB X IDE 或 MPLAB Xpress IDE
 - XC8 編譯器
+- HIDBootloader
 
 ## 使用說明
 
@@ -32,7 +33,7 @@
 
 ### 更新固件
 
-1. 使用連接到 PIC18F2550 的USB口。
+1. 使用[HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。
 2. 將要更新的固件 HEX 檔案發送到 Bootloader。
 3. Bootloader 將接收並驗證固件，然後將其寫入微控制器的程式記憶體。
 
