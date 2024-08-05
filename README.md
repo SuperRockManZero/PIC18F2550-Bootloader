@@ -22,6 +22,8 @@
 ### 使用者程式
 1. 設定Codeoffset，如圖。
    ![Codeoffset](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/Required_Application_Project_Codeoffset_Linker_Settings_for_XC8.png)
+   2. 設定ROM ranges
+      ![ROM ranges](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/Required_Application_Project_ROM_Ranges_Linker_Settings_for_XC8.png)
 ### 硬體連接
  1. 安排電源
     - 使用USB電源時；將VBUS與VCC連接，VUSB與VCC斷開。
