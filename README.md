@@ -27,7 +27,7 @@
   1. 使用[HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。將要更新的使用者程式 HEX 檔案傳送到 Bootloader。
   2.  Bootloader 將接收並驗證，然後將其寫入微控制器的程式記憶體。
 ### 限制
- 1. config bit 已固定
+ 1. [config bit](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/config_bit.txt) 不得更改
  2. 不可使用 PIC18 擴展指令集
  3. RE3 只能為輸入引腳
  4. RC0 在 Bootloader 期間為狀態指示輸出引腳
