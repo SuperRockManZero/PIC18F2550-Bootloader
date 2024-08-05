@@ -17,6 +17,7 @@
 - HIDBootloader
 
 ## HIDBootloader
+透過 HID Bootloader 視窗應用程式，傳送使用者程式。
 ![HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/p2.jpg)
 
 ## 使用說明
