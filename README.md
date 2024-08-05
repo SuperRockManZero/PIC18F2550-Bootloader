@@ -7,6 +7,8 @@
 - 驗證接收到的使用者程式是否正確
 - 簡化使用者程式更新流程
 
+## Bootloader 原理
+
 ## 硬體要求
 - PIC18F2550 或 PIC18LF2550 微控制器
 - USB 通信接口
@@ -17,15 +19,14 @@
 - HIDBootloader
 
 ## 使用說明
-
 ### 燒錄 Bootloader
   1. 使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
 ### config bit
+### XC8 編譯器的設定
 ### 硬體連接
 ### 更新使用者程式
-  1. 使用[HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。
-  2. 將要更新的使用者程式 HEX 檔案傳送到 Bootloader。
-  3. Bootloader 將接收並驗證，然後將其寫入微控制器的程式記憶體。
+  1. 使用[HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。將要更新的使用者程式 HEX 檔案傳送到 Bootloader。
+  2.  Bootloader 將接收並驗證，然後將其寫入微控制器的程式記憶體。
 
 ## 參考資料
 
