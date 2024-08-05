@@ -17,17 +17,21 @@
 - HIDBootloader
 
 ## 使用說明
-### 燒錄 Bootloader
-  1. 使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
-### XC8 編譯器的設定
+### 預先燒錄 Bootloader
+使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
+### 使用者程式
 ### 硬體連接
- 1. RE3連接至GND
- 2. 開啟電源後即可進入Bootloader
+ 1. 安排電源
+    - 使用USB電源時；將VBUS與VCC連接，VUSB與VCC斷開。
+    - 使用外接 5V 時；將VBUS與VCC斷開，VUSB與VCC斷開。
+    - 不可使用 3.3V。
+ 2. 將 RE3 引腳連接至GND
+ 3. 開啟電源後即可進入Bootloader
 ### 更新使用者程式
   1. 使用[HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。將要更新的使用者程式 HEX 檔案傳送到 Bootloader。
   2.  Bootloader 將接收並驗證，然後將其寫入微控制器的程式記憶體。
 ### 限制
- 1. [config bit](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/config_bit.txt) 不得更改
+ 1. [config bit](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/config_bit.txt) 不可更改
  2. 不可使用 PIC18 擴展指令集
  3. RE3 只能為輸入引腳
  4. RC0 在 Bootloader 期間為狀態指示輸出引腳
@@ -61,42 +65,3 @@
 1. 使用C18編譯
 	a. 應加入 MLA 內的 "rm18f2550_g.lkr" 作為連接描述檔。(參考 PIC18F Bootloader Introduction V2.PDF)
 
-
-附錄 : config bit 設定
-	PLLDIV = 5       // PLL Prescaler Selection bits (Divide by 5 (20 MHz oscillator input))
-	CPUDIV = OSC1_PLL2// System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])
-	USBDIV = 2       // USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1) (USB clock source comes from the 96 MHz PLL divided by 2)
-	FOSC = HSPLL_HS  // Oscillator Selection bits (HS oscillator, PLL enabled (HSPLL))
-	FCMEN = OFF      // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor disabled)
-	IESO = OFF       // Internal/External Oscillator Switchover bit (Oscillator Switchover mode disabled)
-	PWRT = ON        // Power-up Timer Enable bit (PWRT enabled)
-	BOR = OFF        // Brown-out Reset Enable bits (Brown-out Reset disabled in hardware and software)
-	BORV = 3         // Brown-out Reset Voltage bits (Minimum setting)
-	VREGEN = ON      // USB Voltage Regulator Enable bit (USB voltage regulator enabled)
-	WDT = OFF        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
-	WDTPS = 32768    // Watchdog Timer Postscale Select bits (1:32768)
-	CCP2MX = ON      // CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)
-	PBADEN = OFF     // PORTB A/D Enable bit (PORTB<4:0> pins are configured as digital I/O on Reset)
-	LPT1OSC = OFF    // Low-Power Timer 1 Oscillator Enable bit (Timer1 configured for higher power operation)
-	MCLRE = OFF      // MCLR Pin Enable bit (RE3 input pin enabled; MCLR pin disabled)
-	STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
-	LVP = OFF        // Single-Supply ICSP Enable bit (Single-Supply ICSP disabled)
-	XINST = OFF      // Extended Instruction Set Enable bit (Instruction set extension and Indexed Addressing mode disabled (Legacy mode))
-	CP0 = OFF        // Code Protection bit (Block 0 (000800-001FFFh) is not code-protected)
-	CP1 = OFF        // Code Protection bit (Block 1 (002000-003FFFh) is not code-protected)
-	CP2 = OFF        // Code Protection bit (Block 2 (004000-005FFFh) is not code-protected)
-	CP3 = OFF        // Code Protection bit (Block 3 (006000-007FFFh) is not code-protected)
-	CPB = OFF        // Boot Block Code Protection bit (Boot block (000000-0007FFh) is not code-protected)
-	CPD = OFF        // Data EEPROM Code Protection bit (Data EEPROM is not code-protected)
-	WRT0 = OFF       // Write Protection bit (Block 0 (000800-001FFFh) is not write-protected)
-	WRT1 = OFF       // Write Protection bit (Block 1 (002000-003FFFh) is not write-protected)
-	WRT2 = OFF       // Write Protection bit (Block 2 (004000-005FFFh) is not write-protected)
-	WRT3 = OFF       // Write Protection bit (Block 3 (006000-007FFFh) is not write-protected)
-	WRTC = OFF       // Configuration Register Write Protection bit (Configuration registers (300000-3000FFh) are not write-protected)
-	WRTB = OFF       // Boot Block Write Protection bit (Boot block (000000-0007FFh) is not write-protected)
-	WRTD = OFF       // Data EEPROM Write Protection bit (Data EEPROM is not write-protected)
-	EBTR0 = OFF      // Table Read Protection bit (Block 0 (000800-001FFFh) is not protected from table reads executed in other blocks)
-	EBTR1 = OFF      // Table Read Protection bit (Block 1 (002000-003FFFh) is not protected from table reads executed in other blocks)
-	EBTR2 = OFF      // Table Read Protection bit (Block 2 (004000-005FFFh) is not protected from table reads executed in other blocks)
-	EBTR3 = OFF      // Table Read Protection bit (Block 3 (006000-007FFFh) is not protected from table reads executed in other blocks)
-	EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
