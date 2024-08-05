@@ -16,6 +16,9 @@
 - XC8 編譯器
 - HIDBootloader
 
+## HIDBootloader
+![HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/p2.jpg)
+
 ## 使用說明
 ### 預先燒錄 Bootloader
 使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
