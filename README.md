@@ -7,8 +7,6 @@
 - 驗證接收到的使用者程式是否正確
 - 簡化使用者程式更新流程
 
-## Bootloader 原理
-
 ## 硬體要求
 - PIC18F2550 或 PIC18LF2550 微控制器
 - USB 通信接口
@@ -21,7 +19,6 @@
 ## 使用說明
 ### 燒錄 Bootloader
   1. 使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
-### config bit
 ### XC8 編譯器的設定
 ### 硬體連接
  1. RE3連接至GND
