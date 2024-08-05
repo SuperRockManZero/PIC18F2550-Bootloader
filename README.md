@@ -20,6 +20,8 @@
 ### 預先燒錄 Bootloader
 使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
 ### 使用者程式
+1. 設定Codeoffset，如圖。
+   ![Codeoffset](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/Required_Application_Project_Codeoffset_Linker_Settings_for_XC8.png)
 ### 硬體連接
  1. 安排電源
     - 使用USB電源時；將VBUS與VCC連接，VUSB與VCC斷開。
