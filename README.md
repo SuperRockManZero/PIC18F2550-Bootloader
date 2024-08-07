@@ -44,7 +44,7 @@
 2. 使 RE3 空接或連接至Vcc
 3. 重新開啟電源即可執行使用者程式
 ### 限制
-1. [config bit](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/config_bit.txt) 不可更改
+1. [config bit](Manual%20and%20Win%20APP/config_bit.txt) 不可更改
 2. 不可使用 PIC18 擴展指令集
 3. RE3 只能做為輸入引腳
 4. RC0 在 Bootloader 期間為狀態指示輸出引腳
