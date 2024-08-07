@@ -18,7 +18,7 @@
 
 ## HIDBootloader
 透過 HID Bootloader 視窗應用程式，傳送使用者程式。
-![HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/p2.jpg)
+![HIDBootloader](Photo/p2.jpg)
 
 ## 使用說明
 ### 預先燒錄 Bootloader
@@ -26,9 +26,9 @@
 ### 使用者程式
 設定 XC8 編譯器選項
 1. 設定Codeoffset，如圖：
-   ![Codeoffset](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/Required_Application_Project_Codeoffset_Linker_Settings_for_XC8.png)
+   ![Codeoffset](Photo/Required_Application_Project_Codeoffset_Linker_Settings_for_XC8.png)
 2. 設定ROM ranges，如圖：
-   ![ROM ranges](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Photo/Required_Application_Project_ROM_Ranges_Linker_Settings_for_XC8.png)
+   ![ROM ranges](Photo/Required_Application_Project_ROM_Ranges_Linker_Settings_for_XC8.png)
 ### 硬體連接
 1. 安排電源
     - 使用USB電源時；將VBUS與VCC連接，VUSB與VCC斷開。
