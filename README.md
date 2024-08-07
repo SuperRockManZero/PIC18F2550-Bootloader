@@ -22,7 +22,7 @@
 
 ## 使用說明
 ### 預先燒錄 Bootloader
-使用 MPLAB X IDE 或燒錄工具將 [HEX](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
+使用 MPLAB X IDE 或燒錄工具將 [HEX](Code/production/Bootloader_PIC18F2550.production.hex) 檔案燒錄到 PIC18F2550 微控制器中。
 ### 使用者程式
 設定 XC8 編譯器選項
 1. 設定Codeoffset，如圖：
@@ -37,7 +37,7 @@
 2. 將 RE3 引腳連接至GND
 3. 開啟電源後即可進入Bootloader
 ### 更新使用者程式
-1. 使用[HIDBootloader](https://github.com/SuperRockManZero/PIC18F2550-Bootloader/blob/main/Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。將要更新的使用者程式 HEX 檔案傳送到 Bootloader。
+1. 使用[HIDBootloader](Manual%20and%20Win%20APP/Win/HIDBootloader.exe)連接到 PIC18F2550 的USB口。將要更新的使用者程式 HEX 檔案傳送到 Bootloader。
 2.  Bootloader 將接收並驗證，然後將其寫入微控制器的程式記憶體。
 ### 執行使用者程式
 1. 斷開電源
